@@ -15,8 +15,6 @@ System.register(['angular2/platform/browser', './app.component', 'angular2/route
             }],
         execute: function() {
             browser_1.bootstrap(app_component_1.AppComponent, [
-                //  FIREBASE_PROVIDERS,
-                //  defaultFirebase('https://shining-inferno-2018.firebaseio.com'),
                 router_1.ROUTER_PROVIDERS
             ]);
         }
