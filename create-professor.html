@@ -1,0 +1,26 @@
+<div ng-controller="MyController" class="col-md-9">
+  <form [ngFormModel]="createProfessorForm">
+    <h1>Create your profile</h1>
+  	<div class="col-md-3">
+  		Name
+  	</div>
+  	<div class="col-md-9">
+		<input ngControl="name" [(ngModel)]="professor.name" type='text' class="form-control" placeholder='Name'/>
+  	</div>
+  	<p>&nbsp;</p>
+  	<div class="col-md-3">
+  		University
+  	</div>
+  	<div class="col-md-9">
+		<input [(ngModel)]="professor.university" type='text' class="form-control" placeholder='University'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+	<div class="pull-left">
+		{{message}}
+  	 </div>
+  	 <div class="pull-right">
+		<button class="btn btn-primary" id='submitProfessor' type="button" (click)="submit()">Save</button>
+  	 </div>
+  </form>  	
+</div>

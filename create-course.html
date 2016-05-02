@@ -1,0 +1,162 @@
+<div ng-controller="MyController" class="col-md-9">
+  <form [ngFormModel]="createCourseForm">
+    <h1>Create your course</h1>
+  	<div class="col-md-3">
+  		Module Title
+  	</div>
+  	<div class="col-md-9">
+		<input ngControl="title" [(ngModel)]="course.title" type='text' class="form-control" id='title' placeholder='Title'/>
+  	</div>
+  	<p>&nbsp;</p>
+  	<div class="col-md-3">
+  		Convener
+  	</div>
+  	<div class="col-md-9">
+		<input [(ngModel)]="course.convener" type='text' class="form-control" placeholder='Name the professor'/>
+  	</div>
+  	<p>&nbsp;</p>
+  	<div class="col-md-3">
+  		Module Codes
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.codes[0]' placeholder='Module Code 1'/>
+		<input type='text' class="form-control" [(ngModel)]='course.codes[1]' placeholder='Module Code 2'/>
+		<input type='text' class="form-control" [(ngModel)]='course.codes[2]' placeholder='Module Code 3'/>
+		<input type='text' class="form-control" [(ngModel)]='course.codes[3]' placeholder='Module Code 4'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Number of Students
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.noStudentsMin' placeholder='Minimum'/>
+		<input type='text' class="form-control" [(ngModel)]='course.noStudentsMax' placeholder='Maximum'/>
+		<input type='text' class="form-control" [(ngModel)]='course.noStudentsIdeal' placeholder='Ideal Number'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Total ECTS Credits
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.ectsCredits' placeholder='Total ECTS Credits'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Format of Teaching
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.format[0]' placeholder='Format 1'/>
+		<input type='text' class="form-control" [(ngModel)]='course.format[1]' placeholder='Format 2'/>
+		<input type='text' class="form-control" [(ngModel)]='course.format[2]' placeholder='Format 3'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Convener
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.convener' placeholder='Total ECTS Credits'/>
+  	</div>
+  	<div class="col-md-3">
+  		University
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.university' placeholder='Total ECTS Credits'/>
+  	</div>
+  	<div class="col-md-3">
+  		Department
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.department' placeholder='Total ECTS Credits'/>
+  	</div>
+  	<div class="col-md-3">
+  		Language of Tuition
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.language' placeholder='Total ECTS Credits'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Module Description
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.purposeAims' placeholder='Purpose or Aims'/>
+		<input type='text' class="form-control" [(ngModel)]='course.learningOutcomes' placeholder='Specific Learning Outcomes'/>
+		<input type='text' class="form-control" [(ngModel)]='course.courseContent' placeholder='Summary of Course Content'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Transferable Skills
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.communicationSkills' placeholder='Science Communication Skills'/>
+		<input type='text' class="form-control" [(ngModel)]='course.retrievalSkills' placeholder='Information Technology Retrieval Skills'/>
+		<input type='text' class="form-control" [(ngModel)]='course.interpersonalSkills' placeholder='Interpersonal Skills'/>
+		<input type='text' class="form-control" [(ngModel)]='course.organisationalSkills' placeholder='Time Management and Organisational Skills'/>
+		<input type='text' class="form-control" [(ngModel)]='course.studySkills' placeholder='Teaching and Study Skills'/>
+		<input type='text' class="form-control" [(ngModel)]='course.sociatalSkills' placeholder='Sociatal and Ethics Skills'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Assessment Methods
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.assessmentMethods' placeholder='Assessment Methods'/>
+  	</div>
+
+  	<div class="col-md-3">
+  		Assessment Criteria - in relation to Learning Outcomes
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.assessmentCriteriaThreshold' placeholder='Threshold'/>
+		<input type='text' class="form-control" [(ngModel)]='course.assessmentCriteriaGood' placeholder='Good'/>
+		<input type='text' class="form-control" [(ngModel)]='course.assessmentCriteriaExcellent' placeholder='Excellent'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Resource Implications of Proposal and Proposed Solutions
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.resourceImplications' placeholder='Resource Implications'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+  	<div class="col-md-3">
+  		Recommended Reading Material
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.reports' placeholder='Reports'/>
+		<input type='text' class="form-control" [(ngModel)]='course.papers' placeholder='Papers'/>
+		<input type='text' class="form-control" [(ngModel)]='course.textBooks' placeholder='Text Books'/>
+  	</div>
+  	<p>&nbsp;</p>
+  	
+  	<div class="col-md-3">
+  		Pre-Requisites
+  	</div>
+  	<div class="col-md-9">
+		<input type='text' class="form-control" [(ngModel)]='course.preRequisites' placeholder='Pre-Requisites'/>
+  	</div>
+  	<p>&nbsp;</p>
+
+	<div class="pull-left">
+		{{message}}
+  	 </div>
+  	 <div class="pull-right">
+		<button class="btn btn-primary" id='submitCourse' type="button" (click)="submit()">Save</button>
+  	 </div>
+  </form>  	
+    <ul>
+      <li *ngFor="#courseItem of courses">
+        {{courseItem.course.title}} in the area of {{courseItem.course.codes}}
+      </li>
+    </ul>
+  
+</div>

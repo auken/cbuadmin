@@ -1,0 +1,59 @@
+<html>
+<head>
+<!-- Set the base href -->
+<base href="/">
+<title>CourseBook U Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet/bootstrap.min.css">
+<link rel="stylesheet" href="stylesheet/main.css">
+<link rel="stylesheet" href="stylesheet/theme.css">
+<!-- IE required polyfills, in this exact order -->
+<script src="node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+<script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>   
+<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="node_modules/rxjs/bundles/Rx.js"></script>
+<script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+<!-- Add the router library -->
+<script src="node_modules/angular2/bundles/router.dev.js"></script>
+<script
+	src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+<script>
+	System.config({
+		map : {
+			firebase : 'node_modules/firebase/lib/firebase-web.js',
+			angularfire2 : 'node_modules/angularfire2'
+		},
+		packages : {
+			app : {
+				format : 'register',
+				defaultExtension : 'js'
+			},
+			angularfire2 : {
+				defaultExtension : 'js',
+				main : 'angularfire2.js'
+			}
+		}
+	});
+	System.import('app/main').then(null, console.error.bind(console));
+</script>
+<style>
+li {
+	padding: 3px;
+	border: solid gray 1px;
+	border-radius: 5px;
+	margin: 1px;
+}
+
+li:hover {
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<my-app>Admin loading now...</my-app>
+</body>
+</html>
