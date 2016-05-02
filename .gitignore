@@ -1,2 +1,4 @@
 node_modules
-typings
+typing
+app/*.js
+app/*.js.map
